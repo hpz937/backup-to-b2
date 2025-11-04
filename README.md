@@ -39,13 +39,13 @@ It supports:
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 1. **Copy script**
    ```bash
    sudo cp backup-to-b2.sh /usr/local/bin/
    sudo chmod +x /usr/local/bin/backup-to-b2.sh
-````
+   ```
 
 2. **Create `/etc/restic/` directory**
 
@@ -103,27 +103,27 @@ It supports:
 
 ---
 
-## 🧰 Usage
+## Usage
 
-### 🔹 Run backup manually
+### Run backup manually
 
 ```bash
 sudo /usr/local/bin/backup-to-b2.sh run
 ```
 
-### 🔹 Dry run (show what would be backed up)
+### Dry run (show what would be backed up)
 
 ```bash
 sudo /usr/local/bin/backup-to-b2.sh dry-run
 ```
 
-### 🔹 Clean staging (remove old tarballs)
+### Clean staging (remove old tarballs)
 
 ```bash
 sudo /usr/local/bin/backup-to-b2.sh clean
 ```
 
-### 🔹 Create encrypted config backup
+### Create encrypted config backup
 
 ```bash
 sudo /usr/local/bin/backup-to-b2.sh make-config-backup
@@ -131,7 +131,7 @@ sudo /usr/local/bin/backup-to-b2.sh make-config-backup
 
 Creates `/var/backups/restic-config/restic-config-YYYYMMDD_HHMMSS.tar.gz.enc`
 
-### 🔹 Decrypt config backup
+### Decrypt config backup
 
 ```bash
 sudo /usr/local/bin/backup-to-b2.sh decrypt-config-backup /path/to/restic-config-2025XXXX.tar.gz.enc
@@ -143,13 +143,13 @@ Add `--restore` to overwrite `/etc/restic`, cron, and script:
 sudo /usr/local/bin/backup-to-b2.sh decrypt-config-backup /path/to/file.enc --restore
 ```
 
-### 🔹 Restore Docker volume from latest snapshot
+### Restore Docker volume from latest snapshot
 
 ```bash
 sudo /usr/local/bin/backup-to-b2.sh restore-volume-from-repo mariadb_data latest
 ```
 
-### 🔹 Restore plain tarball into volume
+### Restore plain tarball into volume
 
 ```bash
 sudo /usr/local/bin/backup-to-b2.sh restore-volume mariadb_data /var/backups/staging/volumes/mariadb_data.tar.gz
@@ -170,7 +170,7 @@ sudo /usr/local/bin/backup-to-b2.sh restore-volume mariadb_data /var/backups/sta
 
 ---
 
-## 🧪 Restore a fresh system
+## Restore a fresh system
 
 ### 1: Install dependencies
 
